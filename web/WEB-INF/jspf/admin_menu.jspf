@@ -1,0 +1,47 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@include file="/WEB-INF/jspf/taglib.jspf"%>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="style/menu.css"/>
+</head>
+
+<nav class="nav-collapse" role="navigation">
+    <ul class="tabs primary-nav">
+        <form action="controller" class="tabs__item">
+            <input type="hidden" name="command" value="addSubscriberForm" />
+            <button type="submit" class="b1"><fmt:message key="admin.add_subscriber"/></button>
+        </form>
+        <form action="controller" class="tabs__item">
+            <input type="hidden" name="command" value="insertTariffForm" />
+            <button type="submit" class="b1"><fmt:message key="admin.insert_tariff"/></button>
+        </form>
+        <form action="controller" class="tabs__item">
+            <input type="hidden" name="command" value="listServiceTariffs" />
+            <input type="hidden" name="type" value="delete" />
+            <button type="submit" class="b1"><fmt:message key="admin.delete_tariff"/></button>
+        </form>
+        <form action="controller" class="tabs__item">
+            <input type="hidden" name="command" value="listServiceTariffs" />
+            <input type="hidden" name="type" value="edit" />
+            <button type="submit" class="b1"><fmt:message key="admin.edit_tariff"/></button>
+        </form>
+        <form action="controller" class="tabs__item">
+            <input type="hidden" name="command" value="listSubscribers" />
+            <button type="submit" class="b1"><fmt:message key="admin.list_subscribers"/></button>
+        </form>
+        <form action="controller" class="tabs__item">
+            <input type="hidden" name="command" value="listServiceTariffs" />
+            <button type="submit" class="b1"><fmt:message key="admin.list_service_tariffs"/></button>
+        </form>
+        <form action="controller" class="tabs__item">
+            <input type="hidden" name="command" value="viewAdmin" />
+            <button type="submit" class="b1"><fmt:message key="user.orders"/></button>
+        </form>
+        <form action="controller" class="tabs__item">
+            <input type="hidden" name="command" value="viewSettings" />
+            <button type="submit" class="b1"><fmt:message key="admin.settings"/></button>
+        </form>
+    </ul>
+</nav>
+</html>

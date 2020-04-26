@@ -1,0 +1,66 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+    background: url("img/paper.jpg");
+    font-family: "Helvetica", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+    width: 400px;
+    padding: 5% 0 0;
+    margin: auto;
+}
+
+.form {
+    width: 400px;
+    margin: 0 auto 400px;
+    padding: 45px;
+    text-align: center;
+}
+
+.main-text {
+    font-weight: 100;
+    color: #333;
+}
+
+
+.form input {
+    width: 100%;
+    height: auto;
+    margin: 0 0 15px;
+    padding: 15px;
+    outline: 0;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    background: #f2f2f2;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.btn{
+    width: 100%;
+    height: auto;
+    margin: 0 0 15px;
+    padding: 15px;
+    outline: 0;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    background: #f2f2f2;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+}
+select{
+    width: 100%;
+    height: auto;
+    margin: 0 0 15px;
+    padding: 15px;
+    outline: 0;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    background: #f2f2f2;
+    box-sizing: border-box;
+    font-size: 14px;
+}

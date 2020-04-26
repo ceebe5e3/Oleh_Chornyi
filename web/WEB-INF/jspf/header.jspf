@@ -1,0 +1,47 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@include file="/WEB-INF/jspf/taglib.jspf"%>
+<%@ taglib uri="/WEB-INF/dateTag.tld" prefix="date"%>
+
+<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="style/header.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header>
+    <c:if test="${not empty user}">
+    <div id="container">
+        <div id="leftHeader" >
+            <date:CurrentDate />
+        </div>
+
+        <div id="centerHeader" >
+            <c:if test="${not empty block}">
+                <c:if test="${block eq 'BLOCKED' }">
+                    <fmt:message key="header.block" var="block"/>
+                    <span style="color: #d43d24"><c:out value="${block}"/> </span>
+                </c:if>
+            </c:if>
+        </div>
+
+        <div id="rightHeader" class="fa fa-user" >
+            <c:out value="${user.login}"/>
+            <c:if test="${not empty userRole}">
+                <c:out value="(${userRole.name})"/>
+            </c:if>
+            <a class="fa fa-money-check">
+                <c:if test="${userRole.name == 'subscriber'}">
+                    <c:out value="${money}"/>
+                    <fmt:message key="account.grn" />
+                </c:if>
+            </a>
+            <a class="fa fa-sign-out" style="font-size: 17px; color: white" href="controller?command=logout"></a>
+        </div>
+    </div>
+        </c:if>
+
+        <c:if test="${empty user and title ne 'Login'}">
+            <div id="rightHeader">
+                <a href="login.jsp"><fmt:message key="header.login"/></a>
+            </div>
+        </c:if>
+</header>

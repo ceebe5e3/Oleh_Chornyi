@@ -1,0 +1,38 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 1.125em;
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: "Helvetica", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+#error{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    top: 15px;
+    position: fixed;
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+section{
+    width: 80%;
+    float:left;
+    margin:0 auto;
+    padding-top:35px;
+    padding-left:10px;
+    padding-bottom: 35px;
+}
